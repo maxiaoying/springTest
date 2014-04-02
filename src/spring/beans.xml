@@ -1,0 +1,13 @@
+<beans>
+       <!-- 每个bean都对应有一个id和class -->
+       <bean id="u" class="dao.UserDaoImpl"></bean>
+       <!-- 下面代码表示：在id为userService的service中有一个名叫userDao的属性,
+                              更准确的说是在service中有一个setUserDao的方法 ，该方法调用时必须把上面id为u的bean传进来，
+                              此时就把这两个东西装配起来：专业说法是动态装配。
+                              即可以把UserService.java中的private的userDao属性给注入进来【注入】
+       --> 
+       <bean id="userService" class="service.UserService">
+          <property name="userDao" bean="u"></property>
+       </bean>
+       
+</beans>
