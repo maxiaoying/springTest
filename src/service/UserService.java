@@ -12,18 +12,19 @@ public class UserService {
 	 * 此时你可以多写几个dao的实现类，需要用哪个选即可。
 	 * 
 	 */
-	private UserDao dao = new UserDaoImpl();//该步可放在配置文件中灵活使用
+	private UserDao dao;//该步可放在配置文件中灵活使用
     public void add(User user) {
 		dao.save(user);//new的谁的dao，就调用谁的方法！
 	}
-    
-    
-    
 	public UserDao getDao() {
 		return dao;
 	}
 	public void setDao(UserDao dao) {
 		this.dao = dao;
 	}
+    
+    
+    
+	
     
 }

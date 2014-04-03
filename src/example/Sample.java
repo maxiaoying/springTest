@@ -1,3 +1,4 @@
+package example;
 import java.util.*; 
 import org.jdom.*; 
 import org.jdom.input.SAXBuilder; 

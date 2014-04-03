@@ -1,4 +1,4 @@
-package spring;
+package imitateSpring;
 
 public interface BeanFactory {
 

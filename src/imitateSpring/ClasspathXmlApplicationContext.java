@@ -1,4 +1,4 @@
-package spring;
+package imitateSpring;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ public class ClasspathXmlApplicationContext implements BeanFactory{
 	
 	public ClasspathXmlApplicationContext() throws Exception{
 		SAXBuilder sb = new SAXBuilder();
-		Document doc=sb.build(this.getClass().getClassLoader().getResourceAsStream("spring/beans.xml"));
+		Document doc=sb.build(this.getClass().getClassLoader().getResourceAsStream("beans.xml"));
 		Element root=doc.getRootElement();
 		List list =root.getChildren("bean");
 		for (int i = 0; i < list.size(); i++) {

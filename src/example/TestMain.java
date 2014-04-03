@@ -1,4 +1,4 @@
-package test;
+package example;
 
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

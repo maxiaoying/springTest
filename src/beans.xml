@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+       <bean id="u" class="dao.UserDaoImpl"></bean>
+      
+       <bean id="userService" class="service.UserService">
+<!-- 一定要注意：property中的name的值必须和你UserService.java中定义的变量要一致。
+             也就是和必须和你service中的setDao的方法匹配，有setDao(),则name的值就是dao，即去掉前面的set  -->
+           <!-- 有以下2种方法  -->
+          <property name="dao" ref="u"/>
+          <!--  第二种     <property name="userDao"><ref bean="u" ></ref></property> -->
+       </bean>
+</beans>
